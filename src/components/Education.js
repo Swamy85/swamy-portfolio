@@ -6,21 +6,21 @@ const education = [
 
   {
     degree: "B.Tech in Computer Science and Engineering",
-    college: "Vardhaman College of Engineering",
+    college: "Vardhaman College of Engineering, Hyderabad (JNTUH)",
     duration: "2022 – 2026",
     grade: "CGPA: 7.98"
   },
 
   {
     degree: "Intermediate (MPC)",
-    college: "TSWREIS Gowlidoddy Junior College",
+    college: "TSWREIS Gowlidoddy Junior College, Hyderabad",
     duration: "2020 – 2022",
     grade: "CGPA: 8.79"
   },
 
   {
-    degree: "SSC",
-    college: "TSWREIS Jaipur High School",
+    degree: "Secondary School Certificate (SSC)",
+    college: "TSWREIS Jaipur High School, Mancherial",
     duration: "2020",
     grade: "CGPA: 10"
   }
