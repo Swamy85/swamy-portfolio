@@ -1,123 +1,88 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
-import { FaCode, FaProjectDiagram, FaCertificate } from "react-icons/fa";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiLeetcode, SiGeeksforgeeks, SiCodechef, SiHackerrank } from "react-icons/si";
+import { SiLeetcode } from "react-icons/si";
 
 import profile from "../assets/profile.jpg";
 
 function Hero() {
+  return (
+    <section id="home" className="hero">
 
-return (
+      <div className="hero-content">
 
-<section id="home" className="hero">
+        <img
+          src={profile}
+          alt="Kotari Swamy"
+          className="profile-img"
+        />
 
-<div className="hero-content">
+        <h1>Hi, I'm Kotari Swamy</h1>
 
-{/* Profile Photo */}
-
-<img src={profile} alt="Kotari Swamy" className="profile-img" />
-
-{/* Name */}
-
-<h1>Hi I'm Kotari Swamy</h1>
-
-{/* Typed Roles */}
-<div className="hero-split">
-
-<div className="hero-typing">
-<ReactTyped
+        <ReactTyped
 strings={[
 "Aspiring Software Engineer",
 "Java Developer",
 "Full Stack Developer",
 "React Developer",
+"Web Developer",
+"Machine Learning Enthusiast",
 "DSA Enthusiast",
-"Problem Solver",
-"Competitive Programmer",
-"Software Developer"
+"Problem Solver"
 ]}
 typeSpeed={60}
 backSpeed={40}
 loop
 />
-</div>
-<span className="hero-divider">|</span>
 
-<div className="hero-buttons">
+        
 
-<a href="/resume.pdf" download className="btn resume-btn">
-Download Resume
-</a>
+        {/* Social Icons */}
 
-</div>
-</div>
+        <div className="social-icons">
 
-{/* Quick Highlights */}
+          <a
+            href="https://www.linkedin.com/in/kotariswamy85/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
 
-<div className="hero-highlights">
+          <a
+            href="https://github.com/Swamy85"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
 
-<span>
-<FaCode className="highlight-icon"/> 
-<strong>Solved 730+ DSA Problems Across Platforms</strong>
-</span>
+          <a
+            href="https://leetcode.com/u/swamyk_85/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiLeetcode />
+          </a>
 
-<span>
-<FaProjectDiagram className="highlight-icon"/> 
-<strong>3+ Real Time Projects</strong>
-</span>
+        </div>
 
-<span>
-<FaCertificate className="highlight-icon"/> 
-<strong>5+ Certifications</strong>
-</span>
+        <div className="hero-buttons">
 
-</div>
+          <a href="#contact" className="btn">
+            Get In Touch
+          </a>
 
-{/* Buttons */}
+          <a href="/resume.pdf" download className="btn outline">
+            Download Resume
+          </a>
 
-<div className="social-profiles">
+        </div>
 
-<a href="https://www.linkedin.com/in/kotariswamy85/" target="_blank" rel="noreferrer" className="social-btn linkedin">
-<FaLinkedin/> LinkedIn
-</a>
+      </div>
 
-<a href="https://github.com/Swamy85" target="_blank" rel="noreferrer" className="social-btn github">
-<FaGithub/> GitHub
-</a>
-
-</div>
-
-
-{/* Coding Platforms */}
-<div className="coding-profiles">
-
-<a href="https://leetcode.com/u/swamyk_85/" target="_blank" rel="noreferrer" className="coding-btn leetcode">
-<SiLeetcode/> LeetCode
-</a>
-
-<a href="https://www.geeksforgeeks.org/profile/swamyk_85" target="_blank" rel="noreferrer" className="coding-btn gfg">
-<SiGeeksforgeeks/> GeeksforGeeks
-</a>
-
-<a href="https://www.codechef.com/users/swamyk_85" target="_blank" rel="noreferrer" className="coding-btn codechef">
-<SiCodechef/> CodeChef
-</a>
-
-<a href="https://www.hackerrank.com/profile/22881A0585" target="_blank" rel="noreferrer" className="coding-btn hackerrank">
-<SiHackerrank/> HackerRank
-</a>
-
-</div>
-
-
-
-</div>
-
-</section>
-
-);
-
+    </section>
+  );
 }
 
 export default Hero;
