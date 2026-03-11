@@ -4,7 +4,19 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-      <h2 className="logo">KS</h2>
+      <h1><a
+        href="#home"
+        style={{
+          fontSize: "22px",
+          fontWeight: "700",
+          color: "#2563eb",
+          letterSpacing: "1px",
+          textDecoration: "none",
+          cursor: "pointer"
+        }}
+      >
+        Kotari Swamy
+      </a></h1>
 
       <ul>
 
