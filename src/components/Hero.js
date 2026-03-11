@@ -17,24 +17,25 @@ function Hero() {
           className="profile-img"
         />
 
-        <h1>Kotari Swamy</h1>
+        <h1>Hi, I'm Kotari Swamy</h1>
 
         <ReactTyped
-          strings={[
-            "Aspiring Software Engineer",
-            "Java Developer",
-            "Web Developer",
-            "Machine Learning Enthusiast"
-          ]}
-          typeSpeed={50}
-          backSpeed={30}
-          loop
-        />
+strings={[
+"Aspiring Software Engineer",
+"Java Developer",
+"Full Stack Developer",
+"React Developer",
+"Web Developer",
+"Machine Learning Enthusiast",
+"DSA Enthusiast",
+"Problem Solver"
+]}
+typeSpeed={60}
+backSpeed={40}
+loop
+/>
 
-        <p>
-          Passionate Computer Science student skilled in building
-          innovative solutions using Java, Python and modern web technologies.
-        </p>
+        
 
         {/* Social Icons */}
 
