@@ -12,7 +12,7 @@ const projects = [
       "ML-based healthcare web application that predicts diseases based on symptoms and manages hospital data.",
     image: smartcare,
     tech: ["Python", "HTML", "CSS", "SQLite", "Scikit-learn"],
-    github: "https://github.com/YOUR_GITHUB/smartcare",
+    github: "https://github.com/Swamy85/SmartCare",
     demo: "#"
   },
 
@@ -22,7 +22,7 @@ const projects = [
       "A responsive blogging platform with interactive blog cards, profile pages and dynamic UI components.",
     image: blogger,
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/YOUR_GITHUB/blogger-ui",
+    github: "https://github.com/Swamy85/Blogger-UI",
     demo: "#"
   },
 
@@ -32,7 +32,7 @@ const projects = [
       "AI system that evaluates soccer player performance using machine learning models and data visualization.",
     image: soccer,
     tech: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
-    github: "https://github.com/YOUR_GITHUB/soccer-ai",
+    github: "https://github.com/Swamy85/Soccer-Ai",
     demo: "#"
   }
 ];
