@@ -44,40 +44,21 @@ function About() {
         >
 
           <p>
-            I am a Computer Science Engineering student passionate about
-            building scalable applications and solving real-world problems
-            using modern technologies.
+            Hello! I am Kotari Swamy, a Computer Science Engineering student at Vardhaman College of Engineering (JNTUH). I am interested in software development, machine learning, and cloud technologies and enjoy building web and data-driven applications using Java, Python, JavaScript, and SQL.
           </p>
+
+          
 
           <p>
-            My core interests include software development, web technologies,
-            data structures, and machine learning. I enjoy creating projects
-            that combine creativity with technical problem solving.
+            I have developed projects such as SmartCare, Blogger UI, and Soccer AI Player Performance Analysis. I am also AWS Cloud Foundations certified and always eager to learn new technologies.
           </p>
-
+          
           <p>
-            Apart from coding, I am a state-level Kho-Kho player which has
-            helped me develop teamwork, discipline and leadership skills.
+            Apart from academics, I am a state-level Kho-Kho player, which has helped me develop teamwork, discipline, and leadership skills.
           </p>
+          
 
-          <div className="about-highlights">
-
-            <div className="highlight-card">
-              <h3>7.98</h3>
-              <p>CGPA</p>
-            </div>
-
-            <div className="highlight-card">
-              <h3>7+</h3>
-              <p>Certifications</p>
-            </div>
-
-            <div className="highlight-card">
-              <h3>3+</h3>
-              <p>Projects</p>
-            </div>
-
-          </div>
+          
 
         </motion.div>
 
