@@ -12,15 +12,16 @@ icon: <FaTrophy/>
 
 {
 title: "Teamwork & Leadership",
-desc: "Actively participated in sports activities and team competitions, improving collaboration and leadership skills.",
+desc: "Actively participated in cultural activities and team competitions, improving collaboration and leadership skills.",
 icon: <FaUsers/>
 },
 
 {
 title: "Technical Learning & Certifications",
-desc: "Completed multiple certifications in Cloud, Web Development, Java Programming and Data Analytics.",
+desc: "Earned certifications in Cloud Computing, Web Development, Java Programming, and Data Analytics.",
 icon: <FaMedal/>
-}
+},
+
 
 ];
 
