@@ -9,9 +9,9 @@ const projects = [
   {
     title: "SmartCare",
     description:
-      "ML-based healthcare web application that predicts diseases based on symptoms and manages hospital data.",
+      "Developed an ML-based healthcare web application that predicts diseases from patient symptoms and manages hospital records through an integrated database system.",
     image: smartcare,
-    tech: ["Python", "HTML", "CSS", "SQLite", "Scikit-learn"],
+    tech: ["Python", "HTML", "CSS", "SQLite", "Django"],
     github: "https://github.com/Swamy85/SmartCare",
     demo: "#"
   },
@@ -19,9 +19,9 @@ const projects = [
   {
     title: "Blogger UI",
     description:
-      "A responsive blogging platform with interactive blog cards, profile pages and dynamic UI components.",
+      "Developed a responsive blogging platform with interactive blog cards, user profile pages, and dynamic UI components for an engaging user experience.",
     image: blogger,
-    tech: ["HTML", "CSS", "JavaScript"],
+    tech: ["HTML", "CSS", "JavaScript", "React"],
     github: "https://github.com/Swamy85/Blogger-UI",
     demo: "#"
   },
@@ -29,7 +29,7 @@ const projects = [
   {
     title: "Soccer AI Analysis",
     description:
-      "AI system that evaluates soccer player performance using machine learning models and data visualization.",
+      "Developed an AI-based system that analyzes soccer player performance using machine learning models and visualizes insights through data analytics dashboards.",
     image: soccer,
     tech: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
     github: "https://github.com/Swamy85/Soccer-Ai",
@@ -47,7 +47,7 @@ function Projects() {
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
     >
-      <h2>Projects</h2>
+      <h2>Featured Projects</h2>
 
       <div className="projects-container">
 
