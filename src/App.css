@@ -61,7 +61,7 @@ border-radius:5px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 8%;   /* reduced from 20px 10% */
+padding:15px 8%;   /* reduced from 20px 10% */
 background:white;
 box-shadow:0 3px 15px rgba(0,0,0,0.08);
 position:sticky;
@@ -79,7 +79,7 @@ letter-spacing:1px;
 .navbar ul{
 list-style:none;
 display:flex;
-gap:22px;   /* reduced from 30px */
+gap:25px;   /* reduced from 30px */
 }
 
 .navbar a{
@@ -1629,3 +1629,4 @@ background:#16a34a;
 background:#dc2626;
 
 }
+
