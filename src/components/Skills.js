@@ -25,10 +25,9 @@ function Skills() {
       <h2>Skills & Expertise</h2>
 
       <p className="skills-intro">
-        I have strong foundations in programming, problem solving,
-        and software development. My expertise includes backend
-        programming, frontend technologies, databases and
-        machine learning tools.
+        I have strong foundations in programming, problem solving, and software development. 
+        My expertise spans web development, frontend technologies, databases, and machine learning tools. 
+        I enjoy building scalable and efficient applications that solve real-world problems while continuously exploring new technologies.
       </p>
 
       <div className="skills-grid">
