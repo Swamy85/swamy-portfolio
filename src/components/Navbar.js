@@ -1,45 +1,59 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
 
-  const [menuOpen, setMenuOpen] = useState(false);
+const [menuOpen, setMenuOpen] = useState(false);
 
+return (
 
+<nav className="navbar">
 
-  return (
-    <nav className="navbar">
-      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-{menuOpen ? <FaTimes/> : <FaBars/>}
-</div>
+{/* Logo */}
 
-      <h1>
+<h1>
 <a href="#home" className="logo-circle">KS</a>
 </h1>
 
-      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+{/* Hamburger Icon */}
 
-        <li><a href="#home">Home</a></li>
+<div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+{menuOpen ? <FaTimes/> : <FaBars/>}
+</div>
 
-        <li><a href="#about">About</a></li>
+{/* Navigation Links */}
 
-        <li><a href="#skills">Skills</a></li>
+<ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
-        <li><a href="#projects">Projects</a></li>
+<li><a href="#home" onClick={()=>setMenuOpen(false)}>Home</a></li>
 
-        <li><a href="#education">Education</a></li>
+<li><a href="#about" onClick={()=>setMenuOpen(false)}>About</a></li>
 
-        <li><a href="#certifications">Certifications</a></li>
+<li><a href="#skills" onClick={()=>setMenuOpen(false)}>Skills</a></li>
 
-        <li><a href="#achievements">Achievements</a></li>
+<li><a href="#projects" onClick={()=>setMenuOpen(false)}>Projects</a></li>
 
-        <li><a href="#contact">Contact</a></li>
+<li><a href="#education" onClick={()=>setMenuOpen(false)}>Education</a></li>
 
-      </ul>
+<li><a href="#certifications" onClick={()=>setMenuOpen(false)}>Certifications</a></li>
 
-    </nav>
-  );
+<li><a href="#achievements" onClick={()=>setMenuOpen(false)}>Achievements</a></li>
+
+<li><a href="#contact" onClick={()=>setMenuOpen(false)}>Contact</a></li>
+
+</ul>
+
+{/* Dark Overlay */}
+
+<div
+className={menuOpen ? "menu-overlay active" : "menu-overlay"}
+onClick={()=>setMenuOpen(false)}
+></div>
+
+</nav>
+
+);
+
 }
 
 export default Navbar;
