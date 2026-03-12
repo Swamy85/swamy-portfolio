@@ -59,7 +59,7 @@ Download Resume
 
 <span>
 <FaCode className="highlight-icon"/> 
-<strong>730+ DSA Problems Solved Across Coding Platforms</strong>
+<strong>Solved 730+ DSA Problems Across Platforms</strong>
 </span>
 
 <span>
