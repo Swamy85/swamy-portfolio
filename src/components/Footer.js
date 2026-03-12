@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { FaLinkedin, FaGithub, FaArrowUp } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import {
+FaArrowUp,
+FaWhatsapp,
+FaTelegram,
+FaFacebook,
+FaInstagram,
+FaTwitter
+} from "react-icons/fa";
+
+
 
 function Footer(){
 
@@ -37,33 +45,61 @@ return(
 
 <footer className="footer">
 
-<div className="footer-content">
+<div className="footer-container">
+
+{/* LEFT SIDE */}
+
+<div className="footer-left">
 
 <h3>Kotari Swamy</h3>
 
 <p>Aspiring Software Engineer | Java Developer | Web Developer</p>
-
-<div className="footer-social">
-
-<a href="https://www.linkedin.com/in/kotariswamy85/" target="_blank" rel="noreferrer">
-<FaLinkedin/>
-</a>
-
-<a href="https://github.com/Swamy85" target="_blank" rel="noreferrer">
-<FaGithub/>
-</a>
-
-<a href="https://leetcode.com/u/swamyk_85/" target="_blank" rel="noreferrer">
-<SiLeetcode/>
-</a>
-
-</div>
 
 <p className="footer-copy">
 © {new Date().getFullYear()} Kotari Swamy. All Rights Reserved.
 </p>
 
 </div>
+
+
+{/* RIGHT SIDE */}
+
+<div className="footer-right">
+
+<h4>Connect With Me</h4>
+
+<div className="footer-social">
+
+
+
+
+
+<a href="https://wa.me/918341929472" target="_blank" rel="noreferrer">
+<FaWhatsapp/>
+</a>
+
+<a href="https://t.me/swamyk_85" target="_blank" rel="noreferrer">
+<FaTelegram/>
+</a>
+
+<a href="https://www.instagram.com/kotariswamyorg/" target="_blank" rel="noreferrer">
+<FaInstagram/>
+</a>
+
+<a href="https://www.facebook.com/swamy.kotari.50/" target="_blank" rel="noreferrer">
+<FaFacebook/>
+</a>
+
+<a href="https://x.com/kotariswamyorg" target="_blank" rel="noreferrer">
+<FaTwitter/>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 
 {showTop && (
 
@@ -81,4 +117,4 @@ return(
 
 }
 
-export default Footer
+export default Footer;
