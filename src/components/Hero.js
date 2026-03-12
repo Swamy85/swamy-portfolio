@@ -59,7 +59,7 @@ Download Resume
 
 <span>
 <FaCode className="highlight-icon"/> 
-<strong>Solved 730+ DSA Problems Across Platforms</strong>
+<strong>730+ DSA Problems Solved Across Coding Platforms</strong>
 </span>
 
 <span>
@@ -96,15 +96,15 @@ Download Resume
 <SiLeetcode/> LeetCode
 </a>
 
-<a href="#" target="_blank" rel="noreferrer" className="coding-btn gfg">
+<a href="https://www.geeksforgeeks.org/profile/swamyk_85" target="_blank" rel="noreferrer" className="coding-btn gfg">
 <SiGeeksforgeeks/> GeeksforGeeks
 </a>
 
-<a href="#" target="_blank" rel="noreferrer" className="coding-btn codechef">
+<a href="https://www.codechef.com/users/swamyk_85" target="_blank" rel="noreferrer" className="coding-btn codechef">
 <SiCodechef/> CodeChef
 </a>
 
-<a href="#" target="_blank" rel="noreferrer" className="coding-btn hackerrank">
+<a href="https://www.hackerrank.com/profile/22881A0585" target="_blank" rel="noreferrer" className="coding-btn hackerrank">
 <SiHackerrank/> HackerRank
 </a>
 
