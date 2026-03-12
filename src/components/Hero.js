@@ -3,6 +3,7 @@ import { ReactTyped } from "react-typed";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
+
 import profile from "../assets/profile.jpg";
 
 function Hero() {

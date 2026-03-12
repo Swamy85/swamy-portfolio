@@ -1070,6 +1070,10 @@ color:#94a3b8;
 margin-top:8px;
 
 }
+.footer-social a{
+padding:3px;
+border-radius:50%;
+}
 
 
 /* ========================= */
@@ -1629,4 +1633,5 @@ background:#16a34a;
 background:#dc2626;
 
 }
+/*hero section social icons */
 
