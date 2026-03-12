@@ -116,25 +116,25 @@ display:block;
 
 .nav-links{
 position:fixed;
-
-top:70px;           /* start below navbar */
+top:0;
 right:-100%;
 
-height:calc(100vh - 70px);
+height:100vh;
 width:250px;
 
 background:white;
 
 flex-direction:column;
 align-items:center;
-justify-content:flex-start;
+justify-content:center;
 
 gap:25px;
-padding-top:30px;
 
 transition:0.4s ease;
 
 box-shadow:-5px 0 20px rgba(0,0,0,0.1);
+
+z-index:1000;
 }
 
 .nav-links.active{
@@ -178,7 +178,6 @@ font-weight:600;
 .nav-links a.active::after{
 width:100%;
 }
-
 
 .logo{
 font-size:26px;
