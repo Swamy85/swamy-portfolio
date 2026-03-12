@@ -1,24 +1,24 @@
 import React from "react";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+
+
   return (
     <nav className="navbar">
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+{menuOpen ? <FaTimes/> : <FaBars/>}
+</div>
 
-      <h1><a
-        href="#home"
-        style={{
-          fontSize: "22px",
-          fontWeight: "700",
-          color: "#2563eb",
-          letterSpacing: "1px",
-          textDecoration: "none",
-          cursor: "pointer"
-        }}
-      >
-        Kotari Swamy
-      </a></h1>
+      <h1>
+<a href="#home" className="logo-circle">KS</a>
+</h1>
 
-      <ul>
+      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
         <li><a href="#home">Home</a></li>
 
