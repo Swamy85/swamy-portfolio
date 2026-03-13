@@ -292,6 +292,7 @@ width:250px;
 height:250px;
 border-radius:50%;
 object-fit:cover;
+object-position: top;
 
 border:5px solid white;
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
@@ -1760,7 +1761,7 @@ width:260px;
 height:260px;
 border-radius:20px;
 object-fit:cover;
-
+object-position: top;
 box-shadow:0 15px 35px rgba(0,0,0,0.2);
 
 transition:0.4s;
