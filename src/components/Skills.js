@@ -1,64 +1,30 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaJava, FaPython, FaReact } from "react-icons/fa";
-import { SiJavascript, SiMysql } from "react-icons/si";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { FaJava, FaPython, FaReact, FaDatabase, FaCode, FaCloud, FaBrain, FaGitAlt } from "react-icons/fa";
+import { SiJavascript, SiMongodb, SiExpress, SiNodedotjs, SiMysql, SiHtml5, SiCss } from "react-icons/si";
 
-const skills = [
-  { name: "Java", icon: <FaJava /> },
-  { name: "Python", icon: <FaPython /> },
-  { name: "JavaScript", icon: <SiJavascript /> },
-  { name: "React", icon: <FaReact /> },
-  { name: "SQL", icon: <SiMysql /> },
-
+const groups = [
+  { title: "Programming", note: "Programming foundations", skills: [["Java", <FaJava />], ["JavaScript", <SiJavascript />], ["Python", <FaPython />], ["C", <FaCode />]] },
+  { title: "Frontend", note: "Interfaces and responsive experiences", skills: [["React.js", <FaReact />], ["HTML5", <SiHtml5 />], ["CSS3", <SiCss />], ["Responsive Web Design", <FaCode />]] },
+  { title: "Backend", note: "Services and application logic", skills: [["Node.js", <SiNodedotjs />], ["Express.js", <SiExpress />], ["REST APIs", <FaCode />]] },
+  { title: "Databases", note: "Data storage and querying", skills: [["MongoDB", <SiMongodb />], ["SQL", <SiMysql />]] },
+  { title: "AI & Generative AI", note: "Applied AI concepts", skills: [["Generative AI", <FaBrain />], ["LLMs", <FaBrain />], ["Prompt Engineering", <FaBrain />], ["Artificial Intelligence", <FaBrain />]] },
+  { title: "Developer Tools", note: "Tools I use to build", skills: [["Git", <FaGitAlt />], ["GitHub", <FaGitAlt />], ["VS Code", <FaCode />]] },
+  { title: "Core Computer Science", note: "Foundational knowledge", skills: [["Data Structures & Algorithms", <FaCode />], ["OOP", <FaCode />], ["DBMS", <FaDatabase />], ["Operating Systems", <FaCode />], ["Cloud Computing", <FaCloud />]] },
 ];
 
 function Skills() {
-  return (
-    <motion.section
-      id="skills"
-      className="section"
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
-      viewport={{ once: true }}
-    >
-      <h2>Skills & Expertise</h2>
-
-      <p className="skills-intro">
-        I have strong foundations in programming, problem solving, and software development. 
-        My expertise spans web development, frontend technologies, databases, and machine learning tools. 
-        I enjoy building scalable and efficient applications that solve real-world problems while continuously exploring new technologies.
-      </p>
-
-      <div className="skills-grid">
-
-        {skills.map((skill, index) => (
-
-          <motion.div
-            key={index}
-            className="skill-card"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
-            whileHover={{ scale: 1.08 }}
-          >
-
-            <div className="skill-icon">
-              {skill.icon}
-            </div>
-
-            <div className="skill-name">
-              {skill.name}
-            </div>
-
-          </motion.div>
-
-        ))}
-
-      </div>
-
-    </motion.section>
-  );
+  const [active, setActive] = useState("All");
+  const categories = ["All", ...groups.map(({ title }) => title)];
+  const visible = active === "All" ? groups : groups.filter(({ title }) => title === active);
+  return <motion.section id="skills" className="section skills-section" initial={{ opacity: 0, y: 36 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+    <div className="section-heading"><p className="eyebrow">MY TOOLKIT</p><h2>Skills & expertise</h2><p className="section-lede">A practical toolkit for building, shipping, and improving software. No inflated proficiency scores.</p></div>
+    <div className="skill-filters" role="group" aria-label="Filter skill categories">{categories.map((category) => <button type="button" key={category} onClick={() => setActive(category)} className={active === category ? "selected" : ""}>{category}</button>)}</div>
+    <div className="skill-groups"><AnimatePresence mode="popLayout">{visible.map((group, index) => <motion.article key={group.title} className="skill-group" layout initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.22 }}>
+      <div className="skill-group-heading"><span>{String(groups.indexOf(group) + 1).padStart(2, "0")}</span><div><h3>{group.title}</h3><p>{group.note}</p></div></div>
+      <div className="skill-tags">{group.skills.map(([name, icon]) => <span className="skill-tag" key={name} title={name} aria-label={name}><i aria-hidden="true">{icon}</i><span>{name}</span></span>)}</div>
+    </motion.article>)}</AnimatePresence></div>
+  </motion.section>;
 }
 
 export default Skills;

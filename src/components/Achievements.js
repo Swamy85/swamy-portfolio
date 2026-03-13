@@ -1,29 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaTrophy, FaUsers, FaMedal } from "react-icons/fa";
+import { FaTrophy, FaCode } from "react-icons/fa";
+import codingProfiles from "../data/codingProfiles";
 
-const achievements = [
-
-{
-title: "State-Level Kho-Kho Player",
-desc: "Represented the state in Kho-Kho competitions demonstrating teamwork, leadership, discipline and strategic decision making.",
-icon: <FaTrophy/>
-},
-
-{
-title: "Teamwork & Leadership",
-desc: "Actively participated in cultural activities and team competitions, improving collaboration and leadership skills.",
-icon: <FaUsers/>
-},
-
-{
-title: "Technical Learning & Certifications",
-desc: "Earned certifications in Cloud Computing, Web Development, Java Programming, and Data Analytics.",
-icon: <FaMedal/>
-},
-
-
-];
+const achievements = [{
+  title: "State-Level Kho-Kho Player",
+  desc: "Represented my state in Kho-Kho, building teamwork, discipline, leadership, and the ability to make decisions under pressure.",
+  icon: <FaTrophy />,
+}, {
+  title: `${codingProfiles.overall.problemsSolved} DSA Problems Solved`,
+  desc: "A platform-independent problem-solving milestone. Platform counts are tracked separately and are not added together.",
+  icon: <FaCode />,
+}];
 
 function Achievements(){
 
@@ -41,7 +29,7 @@ transition={{duration:0.7}}
 viewport={{once:true}}
 >
 
-<h2>Achievements & Extracurricular Activities</h2>
+<div className="section-heading"><p className="eyebrow">BEYOND THE SCREEN</p><h2>Discipline, on and off the field.</h2><p className="section-lede">The experiences that shape how I work with a team.</p></div>
 
 <div className="achievements-grid">
 
@@ -59,15 +47,11 @@ transition={{delay:index*0.15}}
 whileHover={{scale:1.05}}
 >
 
-<div className="achievement-icon">
-
-{item.icon}
-
+<div className="achievement-icon">{item.icon}</div>
+<div className="achievement-copy">
+  <h3>{item.title}</h3>
+  <p>{item.desc}</p>
 </div>
-
-<h3>{item.title}</h3>
-
-<p>{item.desc}</p>
 
 </motion.div>
 

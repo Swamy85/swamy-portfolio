@@ -1,120 +1,48 @@
-import React, { useState, useEffect } from "react";
-import {
-FaArrowUp,
-FaWhatsapp,
-FaTelegram,
-FaFacebook,
-FaInstagram,
-FaTwitter
-} from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import { FaArrowUp, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode, SiGeeksforgeeks, SiCodechef, SiHackerrank } from "react-icons/si";
+import codingProfiles from "../data/codingProfiles";
 
+const socials = [
+  ["GitHub", "https://github.com/Swamy85", <FaGithub />],
+  ["LinkedIn", "https://www.linkedin.com/in/kotariswamy85/", <FaLinkedin />],
+  ["Email", "mailto:kotariswamy1@gmail.com", <span aria-hidden="true">@</span>],
+  ["LeetCode", "https://leetcode.com/u/swamyk_85/", <SiLeetcode />],
+  ["GeeksforGeeks", "https://www.geeksforgeeks.org/profile/swamyk_85", <SiGeeksforgeeks />],
+  ["CodeChef", "https://www.codechef.com/users/swamyk_85", <SiCodechef />],
+  ["HackerRank", "https://www.hackerrank.com/profile/22881A0585", <SiHackerrank />],
+];
 
+const explore = [["home", "Home"], ["about", "About"], ["skills", "Technical Skills"], ["projects", "Projects"], ["coding", "Coding Profiles"], ["education", "Education"], ["certifications", "Certifications"]];
+const projects = [["CricketClash", "https://cricket-clash-alpha.vercel.app/"], ["SkillMap", "#projects"], ["SmartCare", "#projects"]];
 
-function Footer(){
+function Footer() {
+  const [showTop, setShowTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => setShowTop(window.scrollY > 400);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-const [showTop,setShowTop] = useState(false);
-
-useEffect(()=>{
-
-const handleScroll = () => {
-
-if(window.scrollY > 400){
-setShowTop(true);
-}else{
-setShowTop(false);
-}
-
-};
-
-window.addEventListener("scroll",handleScroll);
-
-return ()=> window.removeEventListener("scroll",handleScroll);
-
-},[]);
-
-const scrollToTop = () => {
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-};
-
-return(
-
-<footer className="footer">
-
-<div className="footer-container">
-
-{/* LEFT SIDE */}
-
-<div className="footer-left">
-
-<h3>Kotari Swamy</h3>
-
-<p>Aspiring Software Engineer | Java Developer | Web Developer</p>
-
-<p className="footer-copy">
-© {new Date().getFullYear()} Kotari Swamy. All Rights Reserved.
-</p>
-
-</div>
-
-
-{/* RIGHT SIDE */}
-
-<div className="footer-right">
-
-<h4>Connect With Me</h4>
-
-<div className="footer-social">
-
-
-
-
-
-<a href="https://wa.me/918341929472" target="_blank" rel="noreferrer">
-<FaWhatsapp/>
-</a>
-
-<a href="https://t.me/swamyk_85" target="_blank" rel="noreferrer">
-<FaTelegram/>
-</a>
-
-<a href="https://www.instagram.com/kotariswamyorg/" target="_blank" rel="noreferrer">
-<FaInstagram/>
-</a>
-
-<a href="https://www.facebook.com/swamy.kotari.50/" target="_blank" rel="noreferrer">
-<FaFacebook/>
-</a>
-
-<a href="https://x.com/kotariswamyorg" target="_blank" rel="noreferrer">
-<FaTwitter/>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-{showTop && (
-
-<button className="back-to-top" onClick={scrollToTop}>
-
-<FaArrowUp/>
-
-</button>
-
-)}
-
-</footer>
-
-)
-
+  return <footer className="footer">
+    <section className="footer-cta" aria-labelledby="footer-cta-title">
+      <p className="eyebrow">HAVE A GOOD ONE IN MIND?</p>
+      <h2 id="footer-cta-title">LET’S BUILD SOMETHING <span>MEANINGFUL.</span></h2>
+      <div className="footer-cta-bottom"><div><p>I’m Kotari Swamy, a Full-Stack Developer passionate about creating modern web applications and AI-powered solutions.</p><p>Have an interesting project, opportunity, or idea? Let’s connect and make it happen.</p></div><div className="footer-cta-actions"><a className="btn" href="#contact">Get in touch <FaArrowUpRightFromSquare /></a><a className="btn outline" href="/resume.pdf" download>Download resume <FaArrowUpRightFromSquare /></a></div></div>
+    </section>
+    <div className="footer-content">
+      <section className="footer-column footer-brand"><p className="footer-column-label">PERSONAL BRAND</p><h3>SWAMY<span>.</span></h3><strong>Full-Stack Developer | Software Developer</strong><p>Building practical digital experiences through software engineering and modern technologies. {codingProfiles.overall.problemsSolved} DSA problems solved through consistent practice.</p></section>
+      <nav className="footer-column" aria-label="Explore"><p className="footer-column-label">EXPLORE</p>{explore.map(([id, label]) => <a href={`#${id}`} key={id}>{label}</a>)}</nav>
+      <nav className="footer-column" aria-label="Featured projects"><p className="footer-column-label">FEATURED PROJECTS</p>{projects.map(([name, url]) => <a href={url} target={url.startsWith("http") ? "_blank" : undefined} rel={url.startsWith("http") ? "noreferrer" : undefined} key={name}>{name}{name === "CricketClash" && <FaArrowUpRightFromSquare />}</a>)}</nav>
+      <section className="footer-column"><p className="footer-column-label">CONNECT</p><a href="mailto:kotariswamy1@gmail.com">kotariswamy1@gmail.com</a><a href="https://github.com/Swamy85" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/kotariswamy85/" target="_blank" rel="noreferrer">LinkedIn ↗</a></section>
+    </div>
+    <div className="footer-socials" aria-label="Social profiles">{socials.map(([label, url, icon]) => <a href={url} key={label} aria-label={label} title={label} target={url.startsWith("http") ? "_blank" : undefined} rel={url.startsWith("http") ? "noreferrer" : undefined}>{icon}</a>)}</div>
+    <div className="footer-bottom"><p>© {new Date().getFullYear()} Kotari Swamy <span>·</span> Based in India</p><a href="#home" onClick={(event) => { event.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>BACK TO TOP ↑</a></div>
+    <div className="footer-wordmark" aria-hidden="true">SWAMY<span>.</span></div>
+    {showTop && <button className="back-to-top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Back to top"><FaArrowUp /></button>}
+  </footer>;
 }
 
 export default Footer;
