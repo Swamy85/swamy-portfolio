@@ -49,7 +49,6 @@ const codingProfiles = {
       icon: SiHackerrank,
       accent: "mint",
       stats: [
-        { label: "Problems solved", value: "235" },
         { label: "Hackos", value: "2,464" },
       ],
       difficulty: null,
@@ -61,10 +60,11 @@ const codingProfiles = {
       name: "LeetCode",
       username: "swamyk_85",
       url: "https://leetcode.com/u/swamyk_85/",
-      progressUrl: "https://leetcode.com/progress/",
       icon: SiLeetcode,
       accent: "orange",
-      stats: [],
+      stats: [
+        { label: "Total solved problems", value: "235" },
+      ],
       difficulty: null,
       contestRating: null,
       streak: null,

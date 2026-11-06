@@ -72,7 +72,7 @@ function CodingProfiles() {
           <div className="coding-platform-head"><div className="coding-platform-brand"><span className="coding-logo"><PlatformIcon /></span><div><h3>{platform.name}</h3><p>{platform.username}</p></div></div><a href={platform.url} target="_blank" rel="noreferrer" aria-label={`Open ${platform.name} profile`}><FaArrowUpRightFromSquare /></a></div>
           {platform.stats.length ? <div className="coding-platform-stats">{platform.stats.map((stat) => <AnimatedStat key={stat.label} label={stat.label} value={stat.value} />)}</div> : <p className="coding-empty">Profile available. Detailed counts, difficulty statistics, contest rating, and streak have not been added.</p>}
           {platform.stats.length > 0 && <DifficultyBreakdown difficulty={platform.difficulty} />}
-          <div className="coding-platform-links"><a href={platform.url} target="_blank" rel="noreferrer">View profile <FaArrowUpRightFromSquare /></a>{platform.detailUrl && <a href={platform.detailUrl} target="_blank" rel="noreferrer">Hackos details <FaArrowUpRightFromSquare /></a>}{platform.progressUrl && <a href={platform.progressUrl} target="_blank" rel="noreferrer">Progress <FaArrowUpRightFromSquare /></a>}</div>
+          <div className="coding-platform-links"><a href={platform.url} target="_blank" rel="noreferrer">View profile <FaArrowUpRightFromSquare /></a>{platform.detailUrl && <a href={platform.detailUrl} target="_blank" rel="noreferrer">Hackos details <FaArrowUpRightFromSquare /></a>}</div>
         </motion.article>;
       })}
     </div>
